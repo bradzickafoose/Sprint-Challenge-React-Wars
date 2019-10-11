@@ -18,4 +18,6 @@ Data that comes in from the outside of a component is called "props" (properties
 
 1. What are side effects, and how do you sync effects in a React component to state or prop changes?
 
+A side effect is anything that affects something outside the scope of the function being executed. Fetching data from an API, timers, logging, and manually manipulating the DOM are all examples of side effects. There are two categories of side effects in React components - those that don’t require clean-up and those that do require cleanup.
+
 Perform Async functions and side effects (like data fetching) inside of `useEffect` (takes a callback). The second argument is an array of dependencies (Don't forget this!). Include any variable the useEffect uses that might change, or an empty array if there are none.
