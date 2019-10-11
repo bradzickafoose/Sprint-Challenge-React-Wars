@@ -9,17 +9,18 @@ const Character = styled.div`
 `;
 
 const CharacterName = styled.h2`
+    margin-top: 0;
     color: #4f4a4a;
 `;
 
 const CharacterStats = styled.div`
     display: grid;
-    grid-gap: .5rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
 `;
 
 const CharacterStat = styled.span`
-    color: #bfb19b;
+    color: #aeaeae;
     font-size: .8rem;
 
     span {
