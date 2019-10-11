@@ -14,7 +14,7 @@ export default function Characters(props) {
         })
     }, [])
 
-    // 
+    if(!characters.url) return <h3>Loading...</h3>
 
     return (
         <div className="character-container">
