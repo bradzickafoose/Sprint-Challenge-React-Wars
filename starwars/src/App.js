@@ -1,5 +1,5 @@
 import React from 'react';
-import Characters from "./components/Characters";
+import CharactersList from "./components/CharactersList";
 import './App.css';
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <Characters/>
+      <CharactersList />
     </div>
   );
 }
