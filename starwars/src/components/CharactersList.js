@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import CharacterInfo from "./CharacterInfo";
-// import styled from "styled-components";
 
 export default function CharactersList() {
     const [characters, setCharacters] = useState([]);
@@ -18,11 +17,10 @@ export default function CharactersList() {
         });
     }, []);
 
-    // if(!character.name) return <h3>Loading...</h3>
-
     return (
         <div className="characters">
             {characters.map(character => {
+
                 return (
                     <CharacterInfo
                         key={character.created}
