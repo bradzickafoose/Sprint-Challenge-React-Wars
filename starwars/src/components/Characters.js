@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import CharacterCard from "./CharacterInfo";
 // import styled from "styled-components";
 
 export default function Characters(props) {
@@ -18,13 +19,13 @@ export default function Characters(props) {
 
     return (
         <div className="character-container">
-            {/* {characters.map(character => {
+            {characters.map(character => {
                 return (
-                    <CharacterCard 
+                    <CharacterInfo 
                         key={character.id}
                     />
                 )
-            })} */}
+            })}
         </div>
     )
 }
