@@ -4,30 +4,27 @@ import CharacterInfo from "./CharacterInfo";
 
 export default function CharactersList() {
     const [characters, setCharacters] = useState([]);
+
     useEffect(() => {
         axios
-        .get(`https://swapi.co/api/people/`)
-        .then(result => {
+          .get(`https://swapi.py4e.com/api/people/`)
+          .then(result => {
             const characters = result.data.results
-            console.log("React Wars characters:", result.data.results)
+            console.log("React Wars characters:", characters)
             setCharacters(characters)
-        })
-        .catch(error => {
-            console.log("Where da data at?", error);
-        });
+          })
+          .catch(error => console.log("Where da data at?", error));
     }, []);
 
     return (
-        <div className="characters">
-            {characters.map(character => {
-
-                return (
+        <section className="characters">
+            {characters.map(character => (
                     <CharacterInfo
                         key={character.created}
                         name={character.name}
                         homeworld={character.homeworld}
                         gender={character.gender}
-                        birth_year={character.birth_year} 
+                        birth_year={character.birth_year}
                         eye_color={character.eye_color}
                         hair_color={character.hair_color}
                         height={character.height}
@@ -36,8 +33,7 @@ export default function CharactersList() {
                         films={character.films}
                         vehicles={character.vehicles}
                     />
-                );
-            })}
-        </div>
+                ))}
+        </section>
     );
 }
