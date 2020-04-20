@@ -1,5 +1,5 @@
-import React from "react";
-import styled, {keyframes} from "styled-components";
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
 
 const pulse = keyframes`
   0% {
@@ -43,18 +43,18 @@ const CharacterStat = styled.span`
     }
 `;
 
-const CharacterInfo = props => {
+const CharacterInfo = ({ name, gender, birth_year, eye_color, hair_color, height, mass, skin_color }) => {
     return (
-            <Character key={props.created}>
-                <CharacterName>{props.name}</CharacterName>
+            <Character>
+                <CharacterName>{name}</CharacterName>
                 <CharacterStats>
-                    <CharacterStat><span>Gender</span>{props.gender}</CharacterStat>
-                    <CharacterStat><span>Born in</span>{props.birth_year}</CharacterStat>
-                    <CharacterStat><span>Eye color</span>{props.eye_color}</CharacterStat>
-                    <CharacterStat><span>Hair color</span>{props.hair_color}</CharacterStat>
-                    <CharacterStat><span>Height</span>{props.height}cm</CharacterStat>
-                    <CharacterStat><span>Mass</span>{props.mass}</CharacterStat>
-                    <CharacterStat><span>Skin color</span>{props.skin_color}</CharacterStat>
+                    <CharacterStat><span>Gender</span>{gender}</CharacterStat>
+                    <CharacterStat><span>Born in</span>{birth_year}</CharacterStat>
+                    <CharacterStat><span>Eye color</span>{eye_color}</CharacterStat>
+                    <CharacterStat><span>Hair color</span>{hair_color}</CharacterStat>
+                    <CharacterStat><span>Height</span>{height}cm</CharacterStat>
+                    <CharacterStat><span>Mass</span>{mass}</CharacterStat>
+                    <CharacterStat><span>Skin color</span>{skin_color}</CharacterStat>
                 </CharacterStats>
             </Character>
     );
