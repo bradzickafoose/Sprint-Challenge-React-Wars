@@ -10,15 +10,16 @@ const pulse = keyframes`
   }
 `;
 
-const Character = styled.div`
+const Character = styled.article`
     padding: 1.5rem;
     background-color: #fff;
-    border-radius: .5rem;
-    box-shadow: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05);
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
     animation: ${pulse} 0.2s ease-in-out infinite alternate;
     animation-play-state: paused;
     &:hover {
-      animation-play-state: running;
+        animation-play-state: running;
     }
 `;
 
@@ -35,7 +36,7 @@ const CharacterStats = styled.div`
 
 const CharacterStat = styled.span`
     color: #937157;
-    font-size: .8rem;
+    font-size: 0.8rem;
 
     span {
         display: block;
@@ -43,20 +44,50 @@ const CharacterStat = styled.span`
     }
 `;
 
-const CharacterInfo = ({ name, gender, birth_year, eye_color, hair_color, height, mass, skin_color }) => {
+const CharacterInfo = ({
+    name,
+    gender,
+    birth_year,
+    eye_color,
+    hair_color,
+    height,
+    mass,
+    skin_color,
+}) => {
     return (
-            <Character>
-                <CharacterName>{name}</CharacterName>
-                <CharacterStats>
-                    <CharacterStat><span>Gender</span>{gender}</CharacterStat>
-                    <CharacterStat><span>Born in</span>{birth_year}</CharacterStat>
-                    <CharacterStat><span>Eye color</span>{eye_color}</CharacterStat>
-                    <CharacterStat><span>Hair color</span>{hair_color}</CharacterStat>
-                    <CharacterStat><span>Height</span>{height}cm</CharacterStat>
-                    <CharacterStat><span>Mass</span>{mass}</CharacterStat>
-                    <CharacterStat><span>Skin color</span>{skin_color}</CharacterStat>
-                </CharacterStats>
-            </Character>
+        <Character>
+            <CharacterName>{name}</CharacterName>
+            <CharacterStats>
+                <CharacterStat>
+                    <span>Gender</span>
+                    {gender}
+                </CharacterStat>
+                <CharacterStat>
+                    <span>Born in</span>
+                    {birth_year}
+                </CharacterStat>
+                <CharacterStat>
+                    <span>Eye color</span>
+                    {eye_color}
+                </CharacterStat>
+                <CharacterStat>
+                    <span>Hair color</span>
+                    {hair_color}
+                </CharacterStat>
+                <CharacterStat>
+                    <span>Height</span>
+                    {height}cm
+                </CharacterStat>
+                <CharacterStat>
+                    <span>Mass</span>
+                    {mass}
+                </CharacterStat>
+                <CharacterStat>
+                    <span>Skin color</span>
+                    {skin_color}
+                </CharacterStat>
+            </CharacterStats>
+        </Character>
     );
 };
 export default CharacterInfo;
