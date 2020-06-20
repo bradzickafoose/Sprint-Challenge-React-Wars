@@ -1,7 +1,23 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   background-image: url('./sw-bg.jpg');
   background-size: cover;
+}
+
+.App {
+  text-align: center;
+}
+
+.Header h1 {
+  color: #443e3e;
+  text-shadow: 1px 1px 5px #fff;
+}
+
+.characters {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin: 1em 1rem;
 }
